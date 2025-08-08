@@ -1,9 +1,6 @@
 [build]
-  command = "rustup component add rust-src --toolchain nightly-2025-07-19-x86_64-unknown-linux-gnu && npm run build"
+  command = "npm run build"
   publish = "dist"
-
-[build.environment]
-  RUSTUP_TOOLCHAIN = "nightly-2025-07-19-x86_64-unknown-linux-gnu"
 
 [[headers]]
   for = "/*"

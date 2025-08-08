@@ -1,4 +1,3 @@
-import { RGBA_ASTC_10x10_Format } from 'three';
 import Vec2 from './common';
 import { maxParticles, maxNeighbors, MouseState, Particle } from './common';
 import { SimulationParams, BlobParams } from './common';
