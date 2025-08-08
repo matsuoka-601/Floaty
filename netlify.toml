@@ -1,17 +1,9 @@
 [build]
-  command = """
-    rustup toolchain install nightly-2025-08-05-x86_64-unknown-linux-gnu --allow-downgrade --profile minimal &&
-    rustup component add rust-src --toolchain nightly-2025-08-05-x86_64-unknown-linux-gnu &&
-    rustup target add wasm32-unknown-unknown --toolchain nightly-2025-08-05-x86_64-unknown-linux-gnu &&
-    export RUSTUP_TOOLCHAIN=nightly-2025-08-05-x86_64-unknown-linux-gnu &&
-    rustc --version --verbose || true &&
-    rustup show || true &&
-    npm run build
-  """
+  command = "rustup component add rust-src --toolchain nightly-x86_64-unknown-linux-gnu && npm run build"
   publish = "dist"
 
 [build.environment]
-  RUSTUP_TOOLCHAIN = "nightly-2025-08-05-x86_64-unknown-linux-gnu"
+  RUSTUP_TOOLCHAIN = "nightly"
 
 [[headers]]
   for = "/*"
