@@ -56,12 +56,12 @@ function makeMouseState(camera: THREE.OrthographicCamera) {
 		}
 	}
 
-	const label = document.getElementById('mouseLabel')!;
+	// const label = document.getElementById('mouseLabel')!;
 
 	window.addEventListener('pointerdown', (event) => {
 		updateMouseState(event);
 		mouseState.isDragging = true;
-		label.style.display = 'block';
+		// label.style.display = 'block';
 	});
 
 	// prevent swipe back (only on iOS?)
@@ -75,7 +75,7 @@ function makeMouseState(camera: THREE.OrthographicCamera) {
 
 	window.addEventListener('pointerup', () => {
 		mouseState.isDragging = false;
-		label.style.display = 'none';
+		// label.style.display = 'none';
 	});
 
 	return mouseState;
