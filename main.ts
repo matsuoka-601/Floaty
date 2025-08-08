@@ -4,7 +4,7 @@ import GUI from 'lil-gui';
 import Vec2 from './common';
 import { BlobParams, SimulationParams } from './common';
 import { MouseState, Particle } from './common';
-import init, { initThreadPool } from './pkg/test.js';
+import init, { initThreadPool } from './pkg/out.js';
 import blobVert from './shader/blobMetaball.vert'
 import blobFrag from './shader/blobMetaball.frag'
 import fluidVert from './shader/fluidMetaball.vert'
