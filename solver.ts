@@ -2,7 +2,7 @@ import { RGBA_ASTC_10x10_Format } from 'three';
 import Vec2 from './common';
 import { maxParticles, maxNeighbors, MouseState, Particle } from './common';
 import { SimulationParams, BlobParams } from './common';
-import { solve_fluid_jacobi, alloc_buffer, NeighborLinkedList } from './pkg/test.js';
+import { solve_fluid_jacobi, alloc_buffer, NeighborLinkedList } from './pkg/out.js';
 
 export type BoundingBox = { minX: number; maxX: number; minY: number, maxY: number };
 
