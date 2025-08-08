@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "scripts": {
+    "build:wasm": "cross-env RUSTUP_TOOLCHAIN=nightly wasm-pack build --target web --out-name out --out-dir pkg",
+    "build": "npm run build:wasm && webpack build --mode production",
+    "dev": "webpack serve"
+  },
+  "dependencies": {
+    "lil-gui": "^0.20.0",
+    "three": "^0.177.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.178.1",
+    "copy-webpack-plugin": "^13.0.0",
+    "cross-env": "^7.0.3",
+    "html-webpack-plugin": "^5.5.3",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.0",
+    "wasm-pack": "^0.13.1",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}

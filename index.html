@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Floaty</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    html, body { 
+      margin: 0; 
+      width: 100%;
+      height: 100%;
+      overflow: hidden; 
+      touch-action: none;
+    }
+    canvas { display: block; }
+    #window-size {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 5px 10px;
+      font-family: sans-serif;
+      font-size: 14px;
+      white-space: pre; /* 改行をそのまま表示するため */
+      z-index: 9999;
+    }
+    #numThreads {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: sans-serif;
+    }
+    #github-link {
+      position:fixed;
+      bottom: 0;
+      right: 0;
+    }
+    .github-icon {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      font-size: 40px;
+      color: rgb(230, 230, 230); 
+    }
+    * {
+      user-select: none; 
+    }
+  </style>
+</head>
+<body>
+  <script type="module" src="bundle.js"></script>
+  <div id="mouseLabel" style="position: absolute; top: 10px; left: 10px; color: white; font-size: 20px; display: none;">
+    Dragging...
+  </div>
+  <div id="numThreads"></div>
+
+  <a href="" 
+    class="github-icon" 
+    target="_blank" 
+    rel="noopener noreferrer">
+      <i class="fab fa-github"></i>
+  </a>
+</body>
+</html>
