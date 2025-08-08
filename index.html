@@ -12,6 +12,9 @@
       height: 100%;
       overflow: hidden; 
       touch-action: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     canvas { display: block; }
     #window-size {
@@ -59,6 +62,11 @@
     Dragging...
   </div>
   <div id="numThreads"></div>
+  <div id="loading-wrapper">
+    <div id="loading-value">
+      loading now...(won't take longer than 10 seconds I guess)
+    </div>
+  </div>
 
   <a href="https://github.com/matsuoka-601/Floaty" 
     class="github-icon" 

@@ -434,6 +434,7 @@ async function main() {
 		fluidThresholdMaterial.uniforms.t.value += 0.2;
 	}
 
+	document.getElementById('loading-wrapper').style.display = 'none';
 	animate();
 }
 main();
