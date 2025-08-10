@@ -207,8 +207,9 @@ function initScene(
 	});
 
 	let colorParams = {
-		colorObj: [25, 120, 210],
+		// colorObj: [25, 120, 210],
 		// colorObj: [50, 100, 180]
+		colorObj: [70, 100, 180],
 	};
 	fluidThresholdMaterial.uniforms.uFluidColor.value = 
 		new THREE.Vector3(colorParams.colorObj[0] / 255, colorParams.colorObj[1] / 255, colorParams.colorObj[2] / 255);
