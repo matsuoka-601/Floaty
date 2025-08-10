@@ -207,8 +207,8 @@ function initScene(
 	});
 
 	let colorParams = {
-		// colorObj: [25, 120, 210],
-		colorObj: [50, 100, 180]
+		colorObj: [25, 120, 210],
+		// colorObj: [50, 100, 180]
 	};
 	fluidThresholdMaterial.uniforms.uFluidColor.value = 
 		new THREE.Vector3(colorParams.colorObj[0] / 255, colorParams.colorObj[1] / 255, colorParams.colorObj[2] / 255);
@@ -235,13 +235,11 @@ function initScene(
 			Math.floor(window.innerHeight)
 		)
 
-		// TODO : ここのハードコーディングを変える　変数名も変える
-		// この関数の引数の width や height と被らないようにするために w,h にしているので、もっと適切な対応をする
 		if (window.innerWidth > window.innerHeight) {
 			fluidMaterial.uniforms.uSize.value = lengthToPixel(pixelToLength(25, 671, 15), window.innerHeight, h);
 			blobMaterial.uniforms.uSize.value = lengthToPixel(pixelToLength(30, 671, 15), window.innerHeight, h);
 			console.log(blobMaterial.uniforms.uSize.value);
-		} else { // 縦長 ⇒ 横が基準（15）
+		} else { 
 			fluidMaterial.uniforms.uSize.value = lengthToPixel(pixelToLength(25, 671, 15), window.innerWidth, w);
 			blobMaterial.uniforms.uSize.value = lengthToPixel(pixelToLength(30, 671, 15), window.innerWidth, w);
 		}
@@ -396,7 +394,7 @@ async function main() {
 
 	console.log("restDensity: ", params.restDensity);
 
-	// gui.destroy();
+	gui.destroy();
 
 	let [width, height] = [initWidth, initHeight];
 	let frameCount = 0;
