@@ -355,7 +355,7 @@ async function main() {
 		.then(() => console.log('Thread pool initialized'))
 		.catch(e => console.error('Thread pool init failed', e));
 	console.log("end waiting");
-	document.getElementById("numThreads").textContent = `${numThreads} threads`;
+	document.getElementById("numThreads").textContent = `Using ${numThreads} threads`;
 
 	let [initWidth, initHeight] = initWorldSize(worldSize);
 	let pbdSimulator = new PBD(initWidth, initHeight, 0.8 * particleDiameter, wasm);
