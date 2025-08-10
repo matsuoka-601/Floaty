@@ -53,6 +53,7 @@ void main() {
 
         vec2 v = smoothstep(uFluidThreshold * 1.7, uFluidThreshold, c.b) * grad;
         vec2 v_ = 0.03 * grad;
+        // From Maeda Mameo's "aka 6" : https://www.mameson.com/experiment/glsl/aka_6/aka_6.html
         vec2 w = 0.5 + ( 0.5 + length(vUv - 0.5)) * (vUv - 0.5);
         vec2 refrac = 2.0 * sin( t + 30.0 * w.yx) * ( sin( 70.0 * w.yx) + sin( 30.0 * w));
         float edgeFlag = smoothstep(uFluidThreshold * 1.5, uFluidThreshold, c.b);
@@ -68,6 +69,7 @@ void main() {
         finalColor -= 0.2 * smoothstep(0.6, 1., dot(normal, vec3( 0, -1, 0)));
         finalColor = pow(finalColor, vec3(1.0 / 1.));
 
+        // From Maeda Mameo's "aka 6" : https://www.mameson.com/experiment/glsl/aka_6/aka_6.html
         w = vUv;
         float b = w.x / ( 0.03 + w.x) * ( 1.0 - w.x) / ( 1.03 - w.x) * w.y / ( 0.1 + w.y);
         finalColor *= 0.6 + 0.9 * b;
