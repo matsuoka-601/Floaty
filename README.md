@@ -3,7 +3,7 @@ Soft body & fluid simulation based on Position Based Dynamics (PBD).
 
 ![demo](img/demo.gif)
 
-[Try Demo Here!]()
+[Try Demo Here!](https://floaty-fluid.netlify.app)
 
 - **[Position Based Dynamics (PBD)](https://matthias-research.github.io/pages/publications/posBasedDyn.pdf) and [Position Based Fluids (PBF)](https://mmacklin.com/pbf_sig_preprint.pdf)** is used for simulating soft bodies and fluid.
 - **For two-way coupling of soft body and fluid simulation**, a method described in [Unified Particle Physics for Real-Time Applications](https://mmacklin.com/uppfrta_preprint.pdf) is used. 
