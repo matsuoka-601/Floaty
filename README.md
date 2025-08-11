@@ -1,4 +1,4 @@
-# FloatBody
+# Floaty
 Soft body & fluid simulation based on Position Based Dynamics (PBD). 
 
 ![demo](img/demo.gif)
