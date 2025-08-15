@@ -394,7 +394,7 @@ async function main() {
 
 	console.log("restDensity: ", params.restDensity);
 
-	// gui.destroy();
+	gui.destroy();
 
 	let [width, height] = [initWidth, initHeight];
 	let frameCount = 0;
