@@ -51,7 +51,7 @@ void main() {
     if (c.b > uFluidThreshold) {
         finalColor = uFluidColor;
 
-        vec2 v = smoothstep(uFluidThreshold * 1.7, uFluidThreshold, c.b) * grad;
+        vec2 v = smoothstep(uFluidThreshold * 1.5, uFluidThreshold, c.b) * grad;
         vec2 v_ = 0.03 * grad;
         // From Maeda Mameo's "aka 6" : https://www.mameson.com/experiment/glsl/aka_6/aka_6.html
         vec2 w = 0.5 + ( 0.5 + length(vUv - 0.5)) * (vUv - 0.5);
