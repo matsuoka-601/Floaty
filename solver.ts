@@ -545,18 +545,20 @@ export default class PBD {
     
             this.solveFluid(isInsideForFluid, kernelRadius, params.restDensity, params.eps, blobParams);
 
-            if (substep % 5 == 0) {
-                const collisionDistThresh = 0.4;
-                this.makeParticleCollisionConstraintsForBlob(collisionDistThresh, isInsideForBlob, pairConstraints, particleIdToBlob);
-                this.enforceRepulsiveForceForBlob(blobToParticleIdx, isOverlap, blobParams);
-            }
-
+            // When solving these two constraints after the next if statement, the simulation becomes unstable. why?
             for (var i = 0; i < this.distanceConstraints.length; i++) { 
                 this.distanceConstraints[i].project(this.blobParticles, params.distStiffness, 1. / blobParams.blobMass);
             }
             for (var i = 0; i < this.volumeConstraints.length; i++) { 
                 this.volumeConstraints[i].project(this.blobParticles, params.volumeStiffness, params.volumeScale, 1. / blobParams.blobMass);
             }
+
+            if (substep % 5 == 0) {
+                const collisionDistThresh = 0.4;
+                this.makeParticleCollisionConstraintsForBlob(collisionDistThresh, isInsideForBlob, pairConstraints, particleIdToBlob);
+                this.enforceRepulsiveForceForBlob(blobToParticleIdx, isOverlap, blobParams);
+            }
+
             for (var i = 0; i < pairConstraints.length; i++) {
                 pairConstraints[i].project(this.blobParticles, params.pairStiffness, 1. / blobParams.blobMass);
             }
